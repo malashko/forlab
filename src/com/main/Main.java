@@ -2,6 +2,8 @@ package com.main;
 import initGit.initGit;
 import loginGit.loginGit;
 import createReposGit.createReposGit;
+import pageObject.loginPage;
+import pageObject.openGit;
 import testWeb.testDriver;
 
 /**
@@ -36,5 +38,13 @@ public class Main {
         else{
             System.out.println("fail create");
         }
+       /* PageObject
+        openGit git = new openGit();
+        loginPage page = git.open("https://github.com/");
+        page.singGit();
+        page.signIn();
+        page.fill();
+        page.login();
+       */
     }
 }
