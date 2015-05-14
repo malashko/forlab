@@ -1,0 +1,2 @@
+mvn start
+mvn compile
