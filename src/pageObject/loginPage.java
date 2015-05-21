@@ -29,7 +29,7 @@ public class loginPage {
     private WebElement sign;
 
 
-    public void singGit() {
+    public void signGit() {
 
         PageFactory.initElements(driver, this);
     }
