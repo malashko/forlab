@@ -18,7 +18,7 @@ public class testGit {
     }
     @Test
     public void createRepos(){
-        Assert.assertEquals(false,testDriver.createRepos());
+        Assert.assertEquals(true,testDriver.createRepos());
     }
 
 }

@@ -17,7 +17,7 @@ public class createReposGit {
         try {
             driver.findElement(By.className("tooltipped-s")).click();
             driver.findElement(By.linkText("New repository")).click();
-            driver.findElement(By.id("repository_name")).sendKeys("malashko_repository");
+            driver.findElement(By.id("repository_name")).sendKeys("malashko_repository123123");
             WebElement description = driver.findElement(By.id("repository_description"));
             description.sendKeys("repos description");
             driver.findElement(By.id("repository_auto_init")).click();
