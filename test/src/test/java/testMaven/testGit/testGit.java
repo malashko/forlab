@@ -8,7 +8,7 @@ import testWeb.testDriver;
  * Created by FallOutBoy on 17.04.2015.
  */
 public class testGit {
-    @Test
+    @BeforeTest
     public void Setup(){
         Assert.assertEquals(true, testDriver.init());
     }
@@ -16,7 +16,7 @@ public class testGit {
     public void login(){
         Assert.assertEquals(true, testDriver.login());
     }
-    @Test
+    @AfterTest
     public void createRepos(){
         Assert.assertEquals(true,testDriver.createRepos());
     }
