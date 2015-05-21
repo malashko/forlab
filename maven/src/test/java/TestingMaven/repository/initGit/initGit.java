@@ -1,4 +1,4 @@
-package TestingMaven.repository.initGit;
+package initGit;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -10,9 +10,8 @@ import java.util.concurrent.TimeUnit;
  * Created by FallOutBoy on 08.05.2015.
  */
 public class initGit {
-    public static WebDriver driver = new FirefoxDriver();
     public static Logger log = Logger.getLogger("Firefox Driver");
-    public static boolean init(){
+    public static boolean init(WebDriver driver){
         try {
             driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

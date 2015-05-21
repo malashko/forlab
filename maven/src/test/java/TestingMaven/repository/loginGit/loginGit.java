@@ -1,4 +1,4 @@
-package TestingMaven.repository.loginGit;
+package loginGit;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -11,9 +11,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * Created by FallOutBoy on 08.05.2015.
  */
 public class loginGit {
-    public static WebDriver driver = new FirefoxDriver();
     public static Logger log = Logger.getLogger("Firefox Driver");
-    public static boolean login(){
+    public static boolean login(WebDriver driver){
         try {
             driver.get("https://github.com/");
             WebElement button = driver.findElement(By.linkText("Sign in"));

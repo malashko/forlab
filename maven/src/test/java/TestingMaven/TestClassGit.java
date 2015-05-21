@@ -13,18 +13,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  * Created by Jake on 13.03.2015.
  */
 public class TestClassGit {
-
+    public static WebDriver driver = new FirefoxDriver();
    @Test
     public void Setup(){
-        Assert.assertTrue(initGit.init());
+        Assert.assertTrue(initGit.init(driver));
     }
     @BeforeMethod
     public void login(){
-        Assert.assertTrue(loginGit.login());
+        Assert.assertTrue(loginGit.login(driver));
     }
     @AfterMethod
     public void createRepos(){
-        Assert.assertTrue(createReposGit.createRepos());
+        Assert.assertTrue(createReposGit.createRepos(driver));
     }
 
 }
