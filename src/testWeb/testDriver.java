@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
  * Created by FallOutBoy on 06.03.2015.
  */
 public class testDriver {
-    public static WebDriver driver = new FirefoxDriver();
+    
     public static Logger log = Logger.getLogger("Firefox Driver");
-    public static boolean init(){
+    public static boolean init(WebDriver driver){
         try {
             driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -34,7 +34,7 @@ public class testDriver {
         }
         return true;
     }
-    public static boolean login(){
+    public static boolean login(WebDriver driver){
         try {
             driver.get("https://github.com/");
             WebElement button = driver.findElement(By.linkText("Sign in"));
@@ -52,11 +52,11 @@ public class testDriver {
             return false;
         }
     }
-    public static boolean createRepos(){
+    public static boolean createRepos(WebDriver driver){
         try {
             driver.findElement(By.className("tooltipped-s")).click();
             driver.findElement(By.linkText("New repository")).click();
-            driver.findElement(By.id("repository_name")).sendKeys("malashko_rep");
+            driver.findElement(By.id("repository_name")).sendKeys("malashko_rep1241254125");
             WebElement description = driver.findElement(By.id("repository_description"));
             description.sendKeys("repos description");
             driver.findElement(By.id("repository_auto_init")).click();
