@@ -18,11 +18,11 @@ public class TestClassGit {
     public void Setup(){
         Assert.assertTrue(initGit.init());
     }
-    @Test
+    @BeforeMethod
     public void login(){
         Assert.assertTrue(loginGit.login());
     }
-    @Test
+    @AfterMethod
     public void createRepos(){
         Assert.assertTrue(createReposGit.createRepos());
     }
